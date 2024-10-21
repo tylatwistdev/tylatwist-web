@@ -10,9 +10,11 @@ import { createTheme, ThemeProvider } from '@mui/material';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import { HelmetProvider } from 'react-helmet-async';
+
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const toggleDarkMode = false;
-console.log("import.meta.env==>", import.meta.env.VITE_APP_GOOGLE_CLIENT_ID);
 const theme = createTheme({
   typography: {
     fontFamily: ['Inter', 'Oswald', 'Rubik'].join(','),
@@ -54,7 +56,9 @@ root.render(
         <ToastContainer />
         {/* <GoogleOAuthProvider clientId={import.meta.env.VITE_APP_GOOGLE_CLIENT_ID}> */}
           <ThemeProvider theme={theme}>
-            <App />
+            <HelmetProvider>
+              <App />
+            </HelmetProvider>
           </ThemeProvider>
         {/* </GoogleOAuthProvider> */}
       </BrowserRouter>
