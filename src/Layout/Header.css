@@ -1,0 +1,24 @@
+/* Header.css */
+
+/* Ensure the logo looks better and adjusts well with navbar */
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #007bff !important;
+  }
+  
+  .navbar-brand:hover {
+    color: #0056b3 !important;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Navbar links */
+  .nav-link {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  .nav-link:hover {
+    color: #0056b3;
+    transform: scale(1.05);
+  }
+  
