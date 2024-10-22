@@ -1,66 +1,95 @@
-// Footer.js
-
 import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-dark text-light py-5">
+    <footer className="footer-section">
       <div className="container">
         <div className="row">
-          {/* Logo and Description */}
-          <div className="col-md-4 mb-4">
-            <img src="/path-to-your-logo.png" alt="Company Logo" className="mb-3" style={{ width: '150px' }} />
-            <p>Your company tagline or a brief description goes here. Providing excellent services in software development and more.</p>
-          </div>
-
-          {/* Quick Links */}
-          <div className="col-md-2 mb-4">
-            <h5>Quick Links</h5>
-            <ul className="list-unstyled">
-              <li><a href="/" className="text-light">Home</a></li>
-              <li><a href="/about" className="text-light">About Us</a></li>
-              <li><a href="/services" className="text-light">Services</a></li>
-              <li><a href="/contact" className="text-light">Contact</a></li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div className="col-md-3 mb-4">
-            <h5>Contact Us</h5>
-            <p>
-              <strong>Address:</strong><br />
-              123 Main Street, Suite 101,<br />
-              City, Country 12345
+          {/* Our Location */}
+          <div className="col-lg-3 col-md-6 mb-4">
+            <h5 className="footer-heading">Our Location & Contact Us</h5>
+            <p className="footer-text">
+              1st Floor, The Engineering Tower,<br />
+              Aliganj, Lucknow, UP 226021
             </p>
-            <p><strong>Email:</strong> info@yourcompany.com</p>
-            <p><strong>Phone:</strong> +123 456 7890</p>
-          </div>
-
-          {/* Social Media Links */}
-          <div className="col-md-3 mb-4">
-            <h5>Follow Us</h5>
-            <div className="d-flex">
-              <a href="https://facebook.com" className="text-light me-3">
+            <p className="footer-text">
+              Email: <a href="mailto:info@jamtech.com">info@jamtech.com</a><br />
+              Phone: <a href="tel:+1234567890">+1 (234) 567-890</a>
+            </p>
+            {/* Social Media Links */}
+            <div className="social-icons mt-4">
+              <a href="#" className="icon facebook">
                 <i className="fab fa-facebook-f"></i>
               </a>
-              <a href="https://twitter.com" className="text-light me-3">
+              <a href="#" className="icon twitter">
                 <i className="fab fa-twitter"></i>
               </a>
-              <a href="https://instagram.com" className="text-light me-3">
+              <a href="#" className="icon instagram">
                 <i className="fab fa-instagram"></i>
               </a>
-              <a href="https://linkedin.com" className="text-light me-3">
+              <a href="#" className="icon linkedin">
                 <i className="fab fa-linkedin-in"></i>
               </a>
             </div>
+            {/* <div className='row'>
+              <div className="col-lg-12 mb-4">
+                <h5 className="footer-heading">Find Us Here</h5>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3911.9940537403467!2d80.95516901472785!3d26.869766383159688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399b40a943ae623f%3A0xc85cc8d5e918d5b3!2sThe%20Engineering%20Tower%2C%20Aliganj%2C%20Lucknow%2C%20Uttar%20Pradesh%20226021!5e0!3m2!1sen!2sin!4v1693536523945!5m2!1sen!2sin"
+                  width="100%"
+                  height="100"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  title="Our Location"
+                ></iframe>
+              </div>
+            </div> */}
+          </div>
+
+
+          {/* Offered Services */}
+          <div className="col-lg-3 col-md-6 mb-4">
+            <h5 className="footer-heading">Offered Services</h5>
+            <ul className="footer-links">
+              <li><a href="#">Web Development</a></li>
+              <li><a href="#">SEO Optimization</a></li>
+              <li><a href="#">Mobile App Development</a></li>
+              <li><a href="#">Cloud Hosting</a></li>
+              <li><a href="#">Digital Marketing</a></li>
+            </ul>
+          </div>
+
+          {/* Quick Links */}
+          <div className="col-lg-3 col-md-6 mb-4">
+            <h5 className="footer-heading">Quick Links</h5>
+            <ul className="footer-links">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Services</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+
+
+          {/* Newsletter Signup */}
+          <div className="col-lg-3 col-md-6 mb-4">
+            <h5 className="footer-heading">Subscribe to Newsletter</h5>
+            <p className="footer-text">Get the latest updates and offers right in your inbox!</p>
+            <form action="#" className="newsletter-form">
+              <input type="email" className="newsletter-input" placeholder="Your Email" />
+              <button type="submit" className="btn btn-primary btn-block mt-2">Subscribe</button>
+            </form>
           </div>
         </div>
 
-        {/* Copyright Section */}
-        <div className="row mt-4">
-          <div className="col text-center">
-            <p className="mb-0">&copy; {new Date().getFullYear()} Your Company Name. All Rights Reserved.</p>
-          </div>
+        {/* Footer Bottom */}
+        <div className="footer-bottom mt-5">
+          <p className="text-center">
+            &copy; 2014 - 2024 Jamtech Technologies Pvt. Ltd. All Rights Reserved.
+          </p>
         </div>
       </div>
     </footer>
