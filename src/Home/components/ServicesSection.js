@@ -1,13 +1,28 @@
 // Services.js
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { servicesData } from '../../data';
+import { fetchServicesData } from '../../Service/ApiService';
 
 
 
 const ServicesSection = () => {
     
     const servicess = servicesData()
+    const [services, setServices] = useState([]);
+   
 
+    const getServicesData = async () => {
+        try {
+            const data= await fetchServicesData({ });
+            console.log("data", data);
+            
+           
+        } catch (error) {
+        }
+    };
+    useEffect(() => {
+        getServicesData();
+    }, []);
     return (
         <div className="container-fluid my-5">
             <h2 className="text-center mb-4 underline">Our Services</h2>

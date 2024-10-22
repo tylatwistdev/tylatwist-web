@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { BASE_URL } from './config';
+import { SERVICE_LIST } from './API_ENDPOINTS';
 let service = axios.create({
     baseURL: BASE_URL,
     headers: {
@@ -8,14 +9,16 @@ let service = axios.create({
 });
 
 // Function to fetch services data
-export const fetchServicesData = async () => {
+export const fetchServicesData = async (data = {}) => {
     console.log("BASE_URL", BASE_URL);
     
     try {
-        const response = await axios.get("/data/services.json");
-        return response.data; // Return the JSON data
-    } catch (error) {
-        console.error("Error fetching services data:", error);
-        return [];
-    }
+        const response = await service.post(SERVICE_LIST, data);
+        return successResponse(response);
+      } catch (error) {
+        const message = {
+          message: error?.message
+        }
+        return { status: false, data: error?.response?.data ?? message };
+      }
 };
