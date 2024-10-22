@@ -81,5 +81,27 @@
 }
 
 .card:hover {
-  transform: scale(1.05); /* Slightly scale up on hover */
+  transform: scale(1.05);
+  /* Slightly scale up on hover */
+}
+
+
+/* About.css */
+.underline {
+  text-decoration: underline;
+  text-decoration-color: #007bff;
+  text-decoration-thickness: 2px;
+}
+
+.about-image-container {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.about-image {
+  transition: transform 0.3s ease;
+}
+
+.about-image-container:hover .about-image {
+  transform: scale(1.1);
 }
