@@ -1,5 +1,6 @@
 // import { lazy } from 'react';
 import About from '../About';
+import Contact from '../Contact';
 import Home from '../Home';
 import Layout from '../Layout';
 
@@ -19,6 +20,10 @@ const HomeRoutes = {
         {
             path: '/about',
             element: <About />
+        },
+        {
+            path: '/contact',
+            element: <Contact />
         }
     ]
 };

@@ -21,6 +21,9 @@ const Header = () => {
             <li className="nav-item">
               <Link className="nav-link text-uppercase" to="/about">About</Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link text-uppercase" to="/contact">Contact Us</Link>
+            </li>
             <li className="nav-item dropdown">
               <Link className="nav-link dropdown-toggle text-uppercase" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Dropdown
@@ -31,9 +34,6 @@ const Header = () => {
                 <li><hr className="dropdown-divider" /></li>
                 <li><Link className="dropdown-item" to="/something-else">Something else here</Link></li>
               </ul>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link disabled" to="#" aria-disabled="true">Disabled</Link>
             </li>
           </ul>
         </div>
