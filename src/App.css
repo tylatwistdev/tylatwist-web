@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,51 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+/* styles.css */
+.swiper {
+  /* Additional styles for the swiper container */
+  position: relative;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  /* Automatically adjust height */
+}
+
+/* Media queries for custom styles */
+@media (max-width: 640px) {
+  .swiper {
+    height: 60vh;
+    /* Adjust height for mobile */
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .swiper {
+    height: 70vh;
+    /* Adjust height for tablets */
+  }
+}
+
+@media (min-width: 769px) {
+  .swiper {
+    height: 80vh;
+    /* Adjust height for desktops */
+  }
+}
+
+
+
+
+
+/* Services.css (Optional) */
+.card {
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slightly scale up on hover */
 }
