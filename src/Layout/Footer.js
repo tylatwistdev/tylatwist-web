@@ -1,11 +1,35 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Footer = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <footer className="footer-section">
       <div className="container">
         <div className="row">
-          {/* Our Location */}
+          {/* Our Location & Contact Us */}
           <div className="col-lg-3 col-md-6 mb-4">
             <h5 className="footer-heading">Our Location & Contact Us</h5>
             <p className="footer-text">
@@ -31,22 +55,20 @@ const Footer = () => {
                 <i className="fab fa-linkedin-in"></i>
               </a>
             </div>
-            {/* <div className='row'>
-              <div className="col-lg-12 mb-4">
-                <h5 className="footer-heading">Find Us Here</h5>
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3911.9940537403467!2d80.95516901472785!3d26.869766383159688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399b40a943ae623f%3A0xc85cc8d5e918d5b3!2sThe%20Engineering%20Tower%2C%20Aliganj%2C%20Lucknow%2C%20Uttar%20Pradesh%20226021!5e0!3m2!1sen!2sin!4v1693536523945!5m2!1sen!2sin"
-                  width="100%"
-                  height="100"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  title="Our Location"
-                ></iframe>
-              </div>
-            </div> */}
+            {/* Google Map */}
+            <div className="col-lg-12 mb-4 mt-3">
+              <h5 className="footer-heading">Find Us Here</h5>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3911.9940537403467!2d80.95516901472785!3d26.869766383159688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399b40a943ae623f%3A0xc85cc8d5e918d5b3!2sThe%20Engineering%20Tower%2C%20Aliganj%2C%20Lucknow%2C%20Uttar%20Pradesh%20226021!5e0!3m2!1sen!2sin!4v1693536523945!5m2!1sen!2sin"
+                width="100%"
+                height="200"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                title="Our Location"
+              ></iframe>
+            </div>
           </div>
-
 
           {/* Offered Services */}
           <div className="col-lg-3 col-md-6 mb-4">
@@ -72,8 +94,6 @@ const Footer = () => {
             </ul>
           </div>
 
-
-
           {/* Newsletter Signup */}
           <div className="col-lg-3 col-md-6 mb-4">
             <h5 className="footer-heading">Subscribe to Newsletter</h5>
@@ -84,6 +104,22 @@ const Footer = () => {
             </form>
           </div>
         </div>
+
+        {/* Go to Top Button */}
+        {isVisible && (
+          <button
+            onClick={scrollToTop}
+            className="btn btn-primary go-to-top"
+            style={{
+              position: 'fixed',
+              bottom: '30px',
+              right: '30px',
+              zIndex: 1000,
+            }}
+          >
+            <i className="fa fa-angle-double-up"></i>
+          </button>
+        )}
 
         {/* Footer Bottom */}
         <div className="footer-bottom mt-5">
