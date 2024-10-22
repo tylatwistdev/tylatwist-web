@@ -1,16 +1,11 @@
-import About from './About';
+import React from 'react';
 import './App.css';
-import Home from './Home';
-import Layout from './Layout';
-import { Route } from 'react-router-dom';
+import { RouterProvider } from 'react-router-dom';
+import router from './Routes';
 
 function App() {
   return (
-    <Layout >
-
-      <Route exact path="/" component={Home} />
-      <Route path="/about" component={About} />
-    </Layout>
+    <RouterProvider router={router} />
   );
 }
 
