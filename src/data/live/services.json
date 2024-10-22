@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "title": "Web Development",
+        "description": "We provide top-notch web development services using modern technologies.",
+        "image": "/assets/images/services/web-development.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Mobile App Development",
+        "description": "Creating user-friendly and efficient mobile applications.",
+        "image": "/assets/images/services/mobile-app-development.jpg"
+    }
+]

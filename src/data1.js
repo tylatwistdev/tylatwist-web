@@ -11,7 +11,9 @@ import clientImage3 from './assets/images/banner/image1.jpg';
 
 
 export const BannerSliderImages = () => {
-    return [image1, image2];
+    return [
+        image1, image2
+    ];
 };
 
 

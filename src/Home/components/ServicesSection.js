@@ -1,11 +1,13 @@
 // Services.js
 import React from 'react';
-
 import { servicesData } from '../../data';
 
-const servicess = servicesData()
+
 
 const ServicesSection = () => {
+    
+    const servicess = servicesData()
+
     return (
         <div className="container-fluid my-5">
             <h2 className="text-center mb-4 underline">Our Services</h2>
