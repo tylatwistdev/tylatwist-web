@@ -1,6 +1,9 @@
 const Home = () => {
     return (
-        <div>Home</div>
+        <div>
+
+Empowering people with the knowledge, technology, and skills necessary for a better future.
+        </div>
     )
 }
 
