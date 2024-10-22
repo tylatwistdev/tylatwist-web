@@ -5,7 +5,7 @@ import { servicesData } from '../../data';
 
 const servicess = servicesData()
 
-const Services = () => {
+const ServicesSection = () => {
     return (
         <div className="container-fluid my-5">
             <h2 className="text-center mb-4 underline">Our Services</h2>
@@ -30,4 +30,4 @@ const Services = () => {
     );
 };
 
-export default Services;
+export default ServicesSection;

@@ -105,3 +105,61 @@
 .about-image-container:hover .about-image {
   transform: scale(1.1);
 }
+
+
+
+
+.testimonial-card {
+  background: #f8f9fa;
+  /* Light background */
+  border-radius: 10px;
+  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+  transition: transform 0.3s;
+  /* Smooth transition */
+}
+
+.testimonial-card:hover {
+  transform: scale(1.05);
+  /* Slight zoom effect on hover */
+}
+
+.client-image {
+  /* width: 80px; */
+  /* Adjust image size */
+  /* height: 80px; */
+  /* Adjust image size */
+  height: 100%;
+  width: 100%;
+}
+
+.star {
+  color: gold;
+  /* Gold color for stars */
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+  /* Change button color to make them visible */
+  z-index: 10;
+  /* Ensure they appear above other elements */
+  width: 40px;
+  /* Adjust button size */
+  height: 40px;
+  /* Adjust button size */
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #f39c12;
+  /* Change color on hover */
+}
+
+
+.testimonial-image img{
+  height: 150px;
+  width: 150px;
+}

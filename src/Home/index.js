@@ -1,14 +1,15 @@
 import AboutSection from "./components/AboutSection"
 import BannerSlider from "./components/BannerSlider"
-import Services from "./components/Services"
+import ServicesSection from "./components/ServicesSection"
+import TestimonialsSection from "./components/TestimonialsSection"
 
 const Home = () => {
     return (
         <div>
             <BannerSlider />
-            <Services />
+            <ServicesSection />
             <AboutSection />
-            Empowering people with the knowledge, technology, and skills necessary for a better future.
+            <TestimonialsSection />
         </div>
     )
 }
