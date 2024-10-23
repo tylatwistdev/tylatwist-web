@@ -1,0 +1,17 @@
+/* Services.css */
+.service-card {
+    height: 400px; /* Fixed height for the entire card */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body {
+    flex-grow: 1; /* Allow the body to grow to fill space */
+    overflow-y: auto; /* Enable vertical scrolling for overflow */
+    min-height: 150px; /* Minimum height to ensure the card looks consistent */
+}
+
+/* Adjustments for card footer */
+.card-footer {
+    background-color: #f8f9fa; /* Optional: Adjust footer background for better visibility */
+}

@@ -3,6 +3,7 @@ import About from '../About';
 import Contact from '../Contact';
 import Home from '../Home';
 import Layout from '../Layout';
+import Services from '../Services';
 
 
 // render - login
@@ -20,6 +21,10 @@ const HomeRoutes = {
         {
             path: '/about',
             element: <About />
+        },
+        {
+            path: '/services',
+            element: <Services />
         },
         {
             path: '/contact',
