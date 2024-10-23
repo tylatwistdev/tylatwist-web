@@ -1,23 +1,26 @@
 // Services.js
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { servicesData } from '../../data';
 import { fetchServicesData } from '../../Service/ApiService';
+import { DataContext } from '../../contexts/DataProvider';
 
 
 
 const ServicesSection = () => {
-    
+    const { services, setServices } = useContext(DataContext);
     const servicess = servicesData()
-    const [services, setServices] = useState([]);
-   
-
+    console.log("service", services);
+    
     const getServicesData = async () => {
         try {
-            const data= await fetchServicesData({ });
-            console.log("data", data);
-            
-           
+            const response= await fetchServicesData();
+            if(response.status){
+                console.log("data", response.data);
+                setServices(response.data);
+            }
         } catch (error) {
+            console.log("error", error);
+            
         }
     };
     useEffect(() => {

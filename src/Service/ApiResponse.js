@@ -1,5 +1,8 @@
 export const successResponse = (response) => {
-    return { status: true, data: response?.data ?? null }
+    return response?.data ?? null
+}
+export const successResponseList = (response) => {
+    return response?.data ?? []
 }
 export const errorResponse = () => {
 
