@@ -15,3 +15,16 @@
 .card-footer {
     background-color: #f8f9fa; /* Optional: Adjust footer background for better visibility */
 }
+
+
+.custom-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .custom-heading::before, .custom-heading::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #000;
+    margin: 0 15px;
+  }
