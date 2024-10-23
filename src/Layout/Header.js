@@ -3,6 +3,9 @@ import './Header.css'; // External CSS for styling
 import { useContext } from "react";
 import { DataContext } from "../contexts/DataProvider";
 
+// Import icons from a library (e.g., Font Awesome)
+import { FaSun, FaMoon } from 'react-icons/fa';
+
 const Header = () => {
   const { theme, toggleTheme } = useContext(DataContext);
   
@@ -40,7 +43,7 @@ const Header = () => {
                 <li><Link className={`dropdown-item ${theme === 'dark' ? 'text-light' : 'text-dark'}`} to="/something-else">Something else here</Link></li>
               </ul>
             </li>
-            {/* Enhanced Toggle Dark Mode Switch */}
+            {/* Enhanced Toggle Dark Mode Switch with Icons */}
             <li className="nav-item">
               <div className="toggle-switch">
                 <input
@@ -50,7 +53,9 @@ const Header = () => {
                   onChange={toggleTheme}
                 />
                 <label htmlFor="themeSwitch" className={`switch ${theme === 'dark' ? 'dark' : ''}`}>
-                  <span className="slider"></span>
+                  <span className="slider">
+                    {theme === 'dark' ? <FaSun className="icon" /> : <FaMoon className="icon" />}
+                  </span>
                 </label>
               </div>
             </li>

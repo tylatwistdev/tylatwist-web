@@ -54,9 +54,11 @@
   height: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
   border-radius: 50%;
   transition: transform 0.4s ease;
+  display: flex;
+  align-items: center; /* Center icon vertically */
+  justify-content: center; /* Center icon horizontally */
 }
 
 .toggle-switch input:checked + .switch {
@@ -65,6 +67,12 @@
 
 .toggle-switch input:checked + .switch .slider {
   transform: translateX(26px); /* Move the slider when checked */
+}
+
+/* Icon styles */
+.icon {
+  font-size: 14px; /* Size of the icon */
+  color: white; /* Icon color */
 }
 
 /* Dark mode styles */
