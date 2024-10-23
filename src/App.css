@@ -433,3 +433,31 @@ iframe {
   transform: scale(1.1);
 } */
 
+
+.service-content {
+  max-height: 50px;
+  /* Set a maximum height */
+  overflow-y: auto;
+  /* Enable vertical scrolling */
+  margin-top: 10px;
+  /* Optional: add some margin for better appearance */
+}
+
+
+.card {
+  border: none; /* Remove card border */
+  border-radius: 0.5rem; /* Add some border-radius */
+}
+
+.card-img-top {
+  border-radius: 0.5rem 0.5rem 0 0; /* Round the top corners of the image */
+}
+
+.card-title {
+  font-weight: bold; /* Make the title bold */
+}
+
+.card-text {
+  max-height: 100px; /* Set a maximum height for the text */
+  overflow-y: auto; /* Enable vertical scrolling */
+}

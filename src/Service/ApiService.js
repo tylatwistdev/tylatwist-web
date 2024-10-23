@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { BASE_URL } from './config';
+import { BASE_URL } from '../config';
 import { SERVICE_LIST } from './API_ENDPOINTS';
 import { successResponseList } from './ApiResponse';
 let service = axios.create({
