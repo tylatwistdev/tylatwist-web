@@ -1,24 +1,85 @@
 /* Header.css */
 
-/* Ensure the logo looks better and adjusts well with navbar */
+/* Basic styles for the navbar and header */
 .navbar-brand {
-    font-size: 1.5rem;
-    color: #007bff !important;
-  }
-  
-  .navbar-brand:hover {
-    color: #0056b3 !important;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Navbar links */
-  .nav-link {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-  }
-  
-  .nav-link:hover {
-    color: #0056b3;
-    transform: scale(1.05);
-  }
-  
+  font-size: 1.5rem;
+  color: #007bff !important;
+}
+
+.navbar-brand:hover {
+  color: #0056b3 !important;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar links */
+.nav-link {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.nav-link:hover {
+  color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Switch styles */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle-switch input {
+  opacity: 0; /* Hide the default checkbox */
+  width: 0;
+  height: 0;
+}
+
+.switch {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: background-color 0.4s ease;
+  border-radius: 34px;
+}
+
+.slider {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.4s ease;
+}
+
+.toggle-switch input:checked + .switch {
+  background-color: #4caf50; /* Green when checked */
+}
+
+.toggle-switch input:checked + .switch .slider {
+  transform: translateX(26px); /* Move the slider when checked */
+}
+
+/* Dark mode styles */
+.navbar-dark {
+  background-color: #333;
+}
+
+.navbar-dark .navbar-brand {
+  color: #fff;
+}
+
+.navbar-dark .nav-link {
+  color: #fff;
+}
+
+.navbar-dark .dropdown-menu {
+  background-color: #444;
+}
