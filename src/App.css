@@ -445,19 +445,52 @@ iframe {
 
 
 .card {
-  border: none; /* Remove card border */
-  border-radius: 0.5rem; /* Add some border-radius */
+  border: none;
+  /* Remove card border */
+  border-radius: 0.5rem;
+  /* Add some border-radius */
 }
 
 .card-img-top {
-  border-radius: 0.5rem 0.5rem 0 0; /* Round the top corners of the image */
+  border-radius: 0.5rem 0.5rem 0 0;
+  /* Round the top corners of the image */
 }
 
 .card-title {
-  font-weight: bold; /* Make the title bold */
+  font-weight: bold;
+  /* Make the title bold */
 }
 
 .card-text {
-  max-height: 100px; /* Set a maximum height for the text */
-  overflow-y: auto; /* Enable vertical scrolling */
+  /* max-height: 100px; */
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 3em;
+  line-height: 1.5em;
+}
+
+.service-card-image {
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
+  overflow: hidden;
+  /* Ensures the enlarged image stays within the circle */
+  position: relative;
+  /* Required for absolute positioning of the enlarged image */
+}
+
+.service-card-image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  /* Smooth transition for the hover effect */
+}
+
+.service-card-image:hover img {
+  transform: scale(1.2);
+  /* Scale the image on hover */
 }

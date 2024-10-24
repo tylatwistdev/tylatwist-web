@@ -10,6 +10,7 @@ import { DEFAULT_IMAGE } from '../config';
 import './Services.css';
 import wrap from 'word-wrap';
 import CustomHeading from '../components/CustomHeading';
+import ServicesSection from '../components/ServicesSection';
 
 const Services = () => {
   // Team member data
@@ -56,25 +57,7 @@ const Services = () => {
   return (
     <div>
       <BannerSection />
-      <div className="container mt-5">
-            <CustomHeading title="Our Services" />
-            <div className="row">
-                {services.map(service => (
-                    <div key={service.id} className="col-md-4 mb-4">
-                        <div className="card text-center shadow-sm service-card">
-                            <img src={service.image} className="card-img-top" alt={service.title} style={{ height: '200px', objectFit: 'cover' }} />
-                            <div className="card-body">
-                                <h5 className="card-title">{service.title}</h5>
-                                <p className="card-text">{ wrap(service.description, { Default: 2 })}</p>
-                            </div>
-                            <div className="card-footer">
-                                <a href="#" className="btn btn-primary">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </div>
+      <ServicesSection />
     </div>
   )
 }
